@@ -1,0 +1,71 @@
+# {{cookiecutter.project_name}} service
+
+{{cookiecutter.project_name}} service
+
+## Setup Virtual Environment
+
+- How to set up?
+  ```bash
+  python3.12 -m venv .venv
+  ```
+
+## How to set up?
+
+- How to install dependencies?
+  ```bash
+  pip install -e '.[automation,sqlite,test]'
+  ```
+
+## How to build proto files?
+
+- How to build proto files?
+  ```bash
+  sh scripts/build_proto.sh
+  ```
+
+## How to run a development server?
+
+- Build proto.
+  ```bash
+  {{cookiecutter.project_name}} build
+  ```
+- Optionally, build proto to a different destination (relative path).
+  ```bash
+  {{cookiecutter.project_name}} build -o <relative_path>
+  ```
+- Run the development server.
+  ```bash
+  {{cookiecutter.project_name}} runserver
+  ```
+
+## Migrations
+
+- Make migration files
+  ```bash
+  alembic revision --autogenerate -m "Your message here"
+  ```
+- Migrate
+  ```bash
+  alembic upgrade head
+  ```
+  
+## How to load fixtures?
+
+- Use the following command to load fixtures from a JSON file.
+  ```bash
+  {{cookiecutter.project_name}} loaddata <file>.json
+  ```
+  
+## How to run Python REPL?
+
+- Use the following command to run the Python Shell with context.
+  ```bash
+  {{cookiecutter.project_name}} shell
+  ```
+
+## How to build an image for deployment?
+
+- Use the following command to build deployable image.
+  ```bash
+  docker build -t {{cookiecutter.project_name}}:$(python -c "from {{cookiecutter.project_name}} import __version__;print(__version__)") .
+  ```

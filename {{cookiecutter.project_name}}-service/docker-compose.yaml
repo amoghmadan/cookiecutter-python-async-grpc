@@ -1,0 +1,10 @@
+services:
+  application:
+    build: .
+    command: {{cookiecutter.project_name}} runserver
+    container_name: "{{cookiecutter.project_name}}"
+    image: {{cookiecutter.project_name}}:${TAG:-local}
+    ports:
+      - "50051:50051"
+    volumes:
+      - ./logs:/home/{{cookiecutter.project_name}}/{{cookiecutter.project_name}}-service/logs
