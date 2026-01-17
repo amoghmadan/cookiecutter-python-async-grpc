@@ -32,7 +32,7 @@ Use this template to create an async gRPC Python project.
     ```
 - Install the dependencies (you can select database from mysql, postgres, sqlite).
   ```bash
-  pip install -e '.[automation,sqlite,test]'
+  pip install -e '.[automation,test]'
   ```
 
 ## How to run?

@@ -11,9 +11,6 @@ SECRET_KEY = ")uki4xv@9e!b2^rax@qfcmp5#=^^*ziemm^tl1jv+f2nf9e#)$"  # nosec: B105
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# Application definition
-GRPC_APPLICATION = "{{cookiecutter.project_name}}.grpc.application"
-
 # Database settings
 DATABASES = {
     "default": {

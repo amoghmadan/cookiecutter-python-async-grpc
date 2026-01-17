@@ -13,7 +13,7 @@
 
 - How to install dependencies?
   ```bash
-  pip install -e '.[automation,sqlite,test]'
+  pip install -e '.[automation,test]'
   ```
 
 ## How to run a development server?
