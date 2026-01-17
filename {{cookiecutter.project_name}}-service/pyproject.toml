@@ -71,7 +71,7 @@ Issues = "https://github.com/amoghmadan/cookiecutter-async-grpc/issues"
 
 
 [tool.setuptools.packages.find]
-where = ["src"]
+where = ["bin", "src"]
 exclude = ["**/__pycache__"]
 
 
