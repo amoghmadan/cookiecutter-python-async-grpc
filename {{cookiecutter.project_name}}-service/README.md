@@ -16,13 +16,6 @@
   pip install -e '.[automation,sqlite,test]'
   ```
 
-## How to build proto files?
-
-- How to build proto files?
-  ```bash
-  sh scripts/build_proto.sh
-  ```
-
 ## How to run a development server?
 
 - Build proto.
