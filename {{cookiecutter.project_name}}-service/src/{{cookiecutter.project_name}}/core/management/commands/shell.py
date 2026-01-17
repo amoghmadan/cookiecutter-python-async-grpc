@@ -1,5 +1,6 @@
 import os
-import subprocess
+import subprocess  # nosec: B404
+import sys
 
 import click
 
@@ -8,4 +9,5 @@ import click
 @click.pass_context
 def shell(ctx: click.Context) -> None:
     """Python shell with application context."""
-    subprocess.call(["python", "-i"], env=os.environ)
+    args = (sys.executable, "-i")
+    subprocess.call(args, env=os.environ, shell=False)  # nosec: B603
