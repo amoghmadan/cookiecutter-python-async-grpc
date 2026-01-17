@@ -302,3 +302,6 @@ __marimo__/
 
 # Custom
 __version__.py
+bin/
+src/{{cookiecutter.project_name}}/protobuf/*
+!/src/{{cookiecutter.project_name}}/protobuf/__init__.py
