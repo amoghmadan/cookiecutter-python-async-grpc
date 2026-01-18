@@ -3,7 +3,7 @@ services:
     build: .
     command: {{cookiecutter.project_name}} runserver
     container_name: "{{cookiecutter.project_name}}"
-    image: {{cookiecutter.project_name}}:${TAG:-local}
+    image: {{cookiecutter.project_name}}-service:${TAG:-local}
     ports:
       - "50051:50051"
     volumes:

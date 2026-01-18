@@ -60,5 +60,5 @@
 
 - Use the following command to build deployable image.
   ```bash
-  docker build -t {{cookiecutter.project_name}}:$(python -c "from {{cookiecutter.project_name}} import __version__;print(__version__)") .
+  docker build -t {{cookiecutter.project_name}}-service:$(python -c "from {{cookiecutter.project_name}} import __version__;print(__version__)") .
   ```
