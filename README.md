@@ -6,7 +6,7 @@ Use this template to create an async gRPC Python project.
 
 - Set-up base.
   ```bash
-  cookiecutter https://github.com/amoghmadan/cookiecutter-async-grpc.git
+  cookiecutter https://github.com/amoghmadan/cookiecutter-python-async-grpc.git
   ```
 - Follow the prompts to customize your project.
   ```
