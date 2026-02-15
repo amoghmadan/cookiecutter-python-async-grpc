@@ -9,7 +9,7 @@ from sqlalchemy import pool
 from sqlalchemy.engine import Connection
 from sqlalchemy.ext.asyncio import async_engine_from_config
 
-os.environ.setdefault("SETTINGS_MODULE", "{{cookiecutter.project_name}}.settings")
+os.environ.setdefault("GRPC_SETTINGS_MODULE", "{{cookiecutter.project_name}}.settings")
 
 from {{cookiecutter.project_name}}.conf import settings  # noqa: E402
 from {{cookiecutter.project_name}}.db import DEFAULT_DB_ALIAS, models  # noqa: E402

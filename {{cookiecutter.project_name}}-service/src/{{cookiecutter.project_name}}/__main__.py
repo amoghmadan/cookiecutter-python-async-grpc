@@ -3,7 +3,7 @@ import os
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault("SETTINGS_MODULE", "{{cookiecutter.project_name}}.settings")
+    os.environ.setdefault("GRPC_SETTINGS_MODULE", "{{cookiecutter.project_name}}.settings")
     try:
         from {{cookiecutter.project_name}}.core.management import execute_from_command_line
     except ImportError as exc:

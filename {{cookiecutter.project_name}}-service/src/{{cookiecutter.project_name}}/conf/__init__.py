@@ -5,7 +5,7 @@ from typing import Any
 
 from {{cookiecutter.project_name}}.conf import global_settings
 
-ENVIRONMENT_VARIABLE = "SETTINGS_MODULE"
+ENVIRONMENT_VARIABLE = "GRPC_SETTINGS_MODULE"
 
 
 def settings_from_module(module: str) -> type:
@@ -30,8 +30,8 @@ def settings_from_module(module: str) -> type:
     return type("Settings", (object,), fields)
 
 
-settings_module: str | None = os.environ.get(ENVIRONMENT_VARIABLE)
-Settings: type = settings_from_module(settings_module)  # type: ignore[arg-type]
+GRPC_SETTINGS_MODULE: str | None = os.environ.get(ENVIRONMENT_VARIABLE)
+Settings: type = settings_from_module(GRPC_SETTINGS_MODULE)  # type: ignore[arg-type]
 settings: Settings = Settings()  # type: ignore[valid-type]
 
 __all__ = ["settings"]
